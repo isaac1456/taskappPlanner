@@ -12,5 +12,6 @@ val moduleTaksInject = module {
     single { taskRep(get()) }
     single { userRep(get()) }
     single<storagePrefer> { sharedPrefer(androidApplication()) }
+    single { RetrofitGenerator.getInstance() }
     viewModel { taskViewModel(get()) }
 }
